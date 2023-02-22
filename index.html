@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcul IMC</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="bloc">
+    <div class="global-bloc">
+      <p class="title-imc">Calcul <strong>d'IMC</strong></p>
+      <div class="imc-input">
+        <div class="bloc-height">
+          <p class="bloc-p">Votre taille en centimètres.Ex:180</p>
+          <input type="text" class="height" id="imgheight" placeholder="Votre taille en centimètres">
+        </div>
+        <div class="bloc-weight">
+        <p class="bloc-p">Votre poids en KG.Ex:80</p>
+          <input type="text" class="weight" id="imgweight" placeholder="Votre poids en kg">
+        </div>
+      </div>
+      <div class="button-imc">
+        <button class="imc-math" id="buttonIMC">Calculer un imc</button>
+      </div>
+      <div class="results">
+        <h1 class="results-big" id="resultsinbig"></h1>
+        <p class="imc-state" id="state-element"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
