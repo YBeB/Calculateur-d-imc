@@ -24,7 +24,8 @@ function culculatingImc() {
     let imc = (weightInput * 10000) / (heightInput * heightInput);
     let imcTwoNumber = imc.toFixed(2);
     console.log(imcTwoNumber);
-    document.getElementById("resultsinbig").innerHTML = imcTwoNumber;
+    let resultsInBig =document.getElementById("resultsinbig")
+    resultsInBig.innerHTML = imcTwoNumber;
     for (let i = 0; i < BMIData.length; i++) {
       const currentRange = BMIData[i].range;
       const currentName = BMIData[i].name;
@@ -35,12 +36,14 @@ function culculatingImc() {
           `La valeur ${imcTwoNumber} est dans la catégorie "${currentName}"`
         );
         stateHealth.innerHTML = `${currentName}`;
-        imcTwoNumber.style.color = currentColor;
+        resultsInBig.style.color = `${currentColor}`
+        console.log(BMIData[i].color)
       } else if (i === BMIData.length - 1 && imcTwoNumber >= currentRange[1]) {
-        console.log("test");
         // `La valeur ${imcTwoNumber} est dans la catégorie "${currentName}"`
+        
         stateHealth.innerHTML = `${currentName}`;
-        imcTwoNumber.style.color = `${currentColor}`;
+        console.log(BMIData[i].color)
+        resultsInBig.style.color = `${currentColor}`;
       }
     }
   }
